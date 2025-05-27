@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Fluid_Simulations",
+    "description": "Worked with Pugstorm on my master thesis and looked into improving and comparing different fluid simulation for their game Corekeeper.",
+    "image": "/corekeeper.jpg",
+    "link": "https://youtu.be/4EYvU9BU2FA",
+    "repo": "https://github.com/EdvinNordin/Substance-Simulation",
+    "isHovering": false
+  },
+  {
+    "name": "WebFighting",
+    "description": "Web-based 3D-Multiplayer game in the works! Using ThreeJS for graphics and physics and SocketIO for network logic.",
+    "image": "/web.png",
+    "link": "https://webfighting.onrender.com/",
+    "repo": "https://github.com/EdvinNordin/WebFighting",
+    "isHovering": false
+  },
+  {
+    "name": "Tabs-Share",
+    "description": "Simple guitar tabulature website made for me and my dad to share tabs. Made using the MERN-Stack.",
+    "image": "/tab.png",
+    "link": "https://tabs-share.onrender.com/",
+    "repo": "https://github.com/EdvinNordin/Tabs-Share",
+    "isHovering": false
+  },
+  {
+    "name": "PokeChart",
+    "description": "Pokemon graph and visualization for a data visualization course, made with Python and its libraries: Bokeh and Pands.",
+    "image": "/poke.png",
+    "link": "https://edvinnordin.github.io/PokeChart/",
+    "repo": "https://github.com/EdvinNordin/PokeChart",
+    "isHovering": false
+  },
+  {
+    "name": "Corporate_Combat",
+    "description": "AR multiplayer strategy game created in Unity with classmates for my bachelor project.",
+    "image": "/cc.png",
+    "link": "https://youtu.be/Kk89fXrnZrg",
+    "repo": "https://github.com/3DJakob/corporate-combat-game",
+    "isHovering": false
+  },
+  {
+    "name": "Color_me_Home",
+    "description": "Find you way back home to the woods in this small puzzle game made in Unreal Engine, where you play as a chameleon with different abilities.",
+    "image": "/color.png",
+    "link": "https://youtu.be/a1JFtIN9Qpg",
+    "repo": "https://github.com/EdvinNordin/ColorMeHome",
+    "isHovering": false
+  },
+  {
+    "name": "Monte-Carlo_Raytracer",
+    "description": "Custom raytracing renderer made from scratch using the Monte-Carlo raytracing techinque in C++.",
+    "image": "/ray.png",
+    "link": "https://github.com/EdvinNordin/Monte-Carlo-Ray-Tracing",
+    "repo": "https://github.com/EdvinNordin/Monte-Carlo-Ray-Tracing",
+    "isHovering": false
+  },
+  {
+    "name": "Image_Reproduction",
+    "description": "Reproduction of images using smaller images implemented in Matlab.",
+    "image": "/image.png",
+    "link": "temp.com",
+    "repo": "https://github.com/JimmyCedervall/TNM097",
+    "isHovering": false
+  },
+  {
+    "name": "Portfolio",
+    "description": "The page you're on right now! Made using Vue and Bulma.",
+    "image": "/EN.png",
+    "link": "edvinnordin.netlify.app",
+    "repo": "https://github.com/EdvinNordin/Vueing",
+    "isHovering": false
+  }
+]
