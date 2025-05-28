@@ -1,8 +1,10 @@
 <script setup></script>
 <template>
-  <HeroSection />
-  <ProjectsSection />
-  <AboutSection />
+  <div>
+    <HeroSection />
+    <ProjectsSection />
+    <AboutSection />
+  </div>
 </template>
 
 <style lang="scss">

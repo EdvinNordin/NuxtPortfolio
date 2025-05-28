@@ -1,5 +1,4 @@
 <script setup>
-import { ref, onMounted, onBeforeUnmount, nextTick } from "vue";
 const projects = ref([]);
 const scrollForward = ref(true);
 let scrollInterval = null;
@@ -25,7 +24,7 @@ function startAutoScroll() {
       if (container.scrollLeft <= 0) {
         scrollForward.value = true;
       }
-    }, 50); // Adjust speed by changing the interval
+    }, 20); // Adjust speed by changing the interval
   });
 }
 function hovering() {

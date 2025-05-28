@@ -15,20 +15,28 @@ function formatName(name) {
 
 <template>
   <div v-if="project && project.name">
-    <h1 class="title">
-      {{ formatName(project.name) }}
-    </h1>
-    <img :src="project.image" :alt="project.name" class="image" />
-    <p class="subtitle">{{ project.description }}</p>
-  </div>
-  <div v-else>
-    <p>Project not found.</p>
+    <div class="flex flex-row w-full justify-center mb-30">
+      <div class="flex flex-col items-start justify-between">
+        <h1 class="title mb-10">
+          {{ formatName(project.name) }}
+        </h1>
+        <div class="description">
+          <p class="subtitle">{{ project.description }}</p>
+        </div>
+      </div>
+      <img :src="project.image" :alt="project.name" class="image" />
+    </div>
   </div>
 </template>
 
 <style scoped lang="scss">
 .image {
-  max-width: 500px;
+  max-width: 700px;
+  margin-left: 20px;
+}
+
+.description {
+  max-width: 700px;
   margin-left: 20px;
 }
 </style>

@@ -2,7 +2,6 @@
 const route = useRoute();
 const projectName = route.params.project;
 const project = ref(null);
-console.log(route);
 
 onMounted(async () => {
   try {
@@ -21,7 +20,6 @@ onMounted(async () => {
       <h1 class="back">Back to Home</h1>
     </NuxtLink>
     <InfoProject :project="project" />
-    <Button>test</Button>
   </div>
 </template>
 <style scoped lang="scss">
