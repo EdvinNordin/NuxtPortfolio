@@ -27,7 +27,7 @@
     "name": "PokeChart",
     "description": "Pokemon graph and visualization for a data visualization course, made with Python and its libraries: Bokeh and Pands.",
     "image": "/poke.png",
-    "link": "https://edvinnordin.github.io/PokeChart/",
+    "link": "https://edvinnordin.github.io/PokeChart/main.html",
     "repo": "https://github.com/EdvinNordin/PokeChart",
     "isHovering": false
   },
