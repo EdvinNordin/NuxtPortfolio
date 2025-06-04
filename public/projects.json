@@ -65,7 +65,7 @@
   },
   {
     "name": "Portfolio",
-    "description": "The page you're on right now! Made using Vue and Bulma.",
+    "description": "The page you're on right now! Made using Nuxt.",
     "image": "/EN.png",
     "link": "edvinnordin.netlify.app",
     "repo": "https://github.com/EdvinNordin/Vueing",

@@ -16,9 +16,6 @@ onMounted(async () => {
 </script>
 <template>
   <div>
-    <NuxtLink to="/">
-      <h1 class="back">Back to Home</h1>
-    </NuxtLink>
     <InfoProject :project="project" />
   </div>
 </template>

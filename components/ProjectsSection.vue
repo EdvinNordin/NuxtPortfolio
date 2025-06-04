@@ -13,8 +13,8 @@ onMounted(() => {
 </script>
 <template>
   <div class="pl-30">
-    <h2 class="text-5xl">Projects</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 ">
+    <h2 class="text-5xl pb-10">Projects</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
       <div v-for="project in projects" :key="project.name" class="mb-5">
         <ProjectCard :project="project" />
       </div>

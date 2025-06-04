@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <div class="flex md:flex-row flex-col justify-around h-screen">
+  <div class="flex md:flex-row flex-col justify-around high">
     <div class="flex flex-col items-start justify-center gap-4">
       <h1 class="text-5xl">Edvin Nordin</h1>
       <h1 class="text-xl">Your next developer?</h1>
@@ -15,4 +15,8 @@
   </div>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.high {
+  height: 80vh;
+}
+</style>
