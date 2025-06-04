@@ -8,22 +8,22 @@ defineProps({
 
 function formatName(name) {
   if (!name) return "";
-  const newName = name.replaceAll("_", " ");
-  return newName;
 }
 </script>
 
 <template>
-  <div v-if="project && project.name">
-    <div class="flex flex-row w-full justify-center mb-30">
-      <div class="flex flex-col items-start justify-between">
-        <h1 class="title mb-10">
+  <div v-if="project && project.name" class="px-2">
+    <div
+      class="flex flex-row md:flex-row w-full justify-center items-start gap-6"
+    >
+      <div class="flex flex-col flex-1 items-start justify-between gap-4">
+        <h1 class="title mb-2">
           {{ formatName(project.name) }}
         </h1>
         <div class="description">
           <p class="subtitle">{{ project.description }}</p>
         </div>
-        <div class="w-1/5 text-center inline-block">
+        <div class="w-full md:w-auto text-center flex gap-2">
           <a :href="project.link" target="_blank">
             <div class="butt">Link</div>
           </a>
@@ -32,25 +32,23 @@ function formatName(name) {
           </a>
         </div>
       </div>
-      <img :src="project.image" :alt="project.name" class="image" />
+      <img
+        :src="project.image"
+        :alt="project.name"
+        class="image w-full max-w-xs md:max-w-sm object-contain mx-auto md:mx-0"
+      />
     </div>
   </div>
 </template>
 
 <style scoped lang="scss">
-.butt {
-  background-color: grey;
-  border-radius: 5px;
-  padding: 10px;
-}
-
 .image {
-  max-width: 700px;
-  margin-left: 20px;
+  border-radius: 8px;
 }
-
 .description {
-  max-width: 700px;
-  margin-left: 20px;
+  width: 100%;
+}
+.title {
+  width: 100%;
 }
 </style>

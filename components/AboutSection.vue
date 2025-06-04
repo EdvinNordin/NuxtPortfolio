@@ -1,7 +1,7 @@
 <script setup></script>
 <template>
-  <h2 class="title">About Me</h2>
-  <p class="subtitle">
+  <h2 class="text-xl">About Me</h2>
+  <p class="text-base max-w-3xl">
     Hello and welocome to my website! I am a 26 years old passionate software
     engineer located in Umeå that is always excited to learn new things! I am
     intersted in game creation, computer graphics, web building and visulization

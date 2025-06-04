@@ -14,10 +14,13 @@ function formatName(name) {
 <template>
   <div>
     <NuxtLink class="card" :to="`/${project.name}`">
-      <h2 class="projectName">
-        {{ formatName(project.name) }}
-      </h2>
-      <img :src="project.image" :alt="project.name" class="projectImage" />
+      <div class="flex flex-col items-center justify-center h-full gap-2">
+        <img :src="project.image" :alt="project.name" class="projectImage" />
+
+        <h2 class="projectName text-2xl font-bold text-center mt-2 mb-2">
+          {{ formatName(project.name) }}
+        </h2>
+      </div>
     </NuxtLink>
   </div>
 </template>
@@ -28,7 +31,6 @@ function formatName(name) {
   flex-direction: column;
   width: 300px;
   height: 300px;
-  padding: 10px;
   margin-left: 10px;
   margin-right: 10px;
   background: white;
@@ -42,7 +44,6 @@ function formatName(name) {
 
 a:hover {
   background: none;
-  height: 300px;
 }
 
 .projectImage {

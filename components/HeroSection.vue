@@ -1,35 +1,18 @@
 <script setup></script>
 
 <template>
-  <section>
-    <div class="heroSection">
-      <img src="/edvin.png" class="photo" alt="Edvin Nordin" />
-      <div class="is-flex is-flex-direction-column">
-        <h1 class="title">Edvin Nordin</h1>
-        <h1 class="subtitle">Your next developer?</h1>
-        <h1 class="subtitle">
-          Site is currently under construction and is subject to change!
-        </h1>
-      </div>
+  <div class="flex md:flex-row flex-col justify-around h-screen">
+    <div class="flex flex-col items-start justify-center gap-4">
+      <h1 class="text-5xl">Edvin Nordin</h1>
+      <h1 class="text-xl">Your next developer?</h1>
+      <h1 class="text-xl">Site is currently under construction!</h1>
     </div>
-  </section>
+    <img
+      src="/edvin.png"
+      class="md:block hidden md:w-1/2 xl:w-1/3 h-auto object-contain"
+      alt="Edvin Nordin"
+    />
+  </div>
 </template>
 
-<style scoped lang="scss">
-.heroSection {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding-left: 4px;
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
-}
-
-.photo {
-  max-width: 600px;
-  @media (max-width: 768px) {
-    display: none;
-  }
-}
-</style>
+<style scoped lang="scss"></style>
