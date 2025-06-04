@@ -1,22 +1,20 @@
 <script setup></script>
 
 <template>
-  <div class="flex md:flex-row flex-col justify-around high">
-    <div class="flex flex-col items-start justify-center gap-4">
-      <h1 class="text-5xl text-lime-300">Edvin Nordin</h1>
-      <h1 class="text-xl">Your next developer?</h1>
+  <div
+    class="flex flex-col md:flex-row w-7/8 mx-auto h-[80vh] justify-around items-center"
+  >
+    <h1 class="text-6xl text-lime-300">Edvin Nordin</h1>
+    <div class="">
+      <h1 class="text-2xl">Your next developer?</h1>
       <h1 class="text-xl">Site is currently under construction!</h1>
     </div>
-    <!-- <img
+  </div>
+  <!-- <img
       src="/edvin.png"
       class="md:block hidden md:w-1/2 xl:w-1/3 h-auto object-contain"
       alt="Edvin Nordin"
     /> -->
-  </div>
 </template>
 
-<style scoped lang="scss">
-.high {
-  height: 80vh;
-}
-</style>
+<style scoped lang="scss"></style>
