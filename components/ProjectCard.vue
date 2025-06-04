@@ -13,8 +13,8 @@ function formatName(name) {
 
 <template>
   <div>
-    <NuxtLink class="card" :to="`/${project.name}`">
-      <div class="flex flex-col items-center justify-center h-full gap-2">
+    <NuxtLink class="" :to="`/${project.name}`">
+      <div class="flex flex-col h-full border-1 card">
         <img :src="project.image" :alt="project.name" class="projectImage" />
 
         <h2 class="projectName text-2xl font-bold text-center mt-2 mb-2">
@@ -27,19 +27,13 @@ function formatName(name) {
 
 <style lang="scss">
 .card {
-  display: flex;
-  flex-direction: column;
-  width: 300px;
+  /* width: 300px;*/
   height: 300px;
-  margin-left: 10px;
-  margin-right: 10px;
   background: white;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
   overflow: hidden;
 }
 .card:hover {
-  background: #d3d3d3;
+  //background: #d3d3d3;
 }
 
 a:hover {
@@ -50,6 +44,5 @@ a:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 5px;
 }
 </style>

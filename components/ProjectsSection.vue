@@ -12,10 +12,12 @@ onMounted(() => {
 });
 </script>
 <template>
-  <div class="pl-30">
+  <div class="px-4 md:px-8 lg:px-16 m-40">
     <h2 class="text-5xl pb-10">Projects</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-      <div v-for="project in projects" :key="project.name" class="mb-5">
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 bg-zinc-100 w-full"
+    >
+      <div v-for="project in projects" :key="project.name">
         <ProjectCard :project="project" />
       </div>
     </div>
@@ -23,11 +25,11 @@ onMounted(() => {
 </template>
 
 <style scoped lang="scss">
-.horizontal {
+/* .horizontal {
   overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;
   display: flex;
   flex-direction: row;
-}
+} */
 </style>
