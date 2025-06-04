@@ -7,48 +7,38 @@ defineProps({
 });
 
 function formatName(name) {
-  if (!name) return "";
+  return name.replaceAll("_", " ");
 }
 </script>
 
 <template>
-  <div v-if="project && project.name" class="px-2">
+  <div v-if="project && project.name" class="h-[80vh]">
     <div
-      class="flex flex-row md:flex-row w-full justify-center items-start gap-6"
+      class="flex flex-row md:flex-row w-3/4 mx-auto justify-center align-center"
     >
-      <div class="flex flex-col flex-1 items-start justify-between gap-4">
-        <h1 class="title mb-2">
+      <div class="flex flex-col w-1/2">
+        <h1 class="text-3xl text-lime-300">
           {{ formatName(project.name) }}
         </h1>
-        <div class="description">
-          <p class="subtitle">{{ project.description }}</p>
+        <div class="">
+          <p class="">{{ project.description }}</p>
         </div>
-        <div class="w-full md:w-auto text-center flex gap-2">
+        <div class="w-full md:w-auto">
           <a :href="project.link" target="_blank">
-            <div class="butt">Link</div>
+            <div class="">Link</div>
           </a>
           <a :href="project.repo" target="_blank">
-            <div class="butt">Github</div>
+            <div class="">Github</div>
           </a>
         </div>
       </div>
       <img
         :src="project.image"
         :alt="project.name"
-        class="image w-full max-w-xs md:max-w-sm object-contain mx-auto md:mx-0"
+        class="w-1/2 object-contain"
       />
     </div>
   </div>
 </template>
 
-<style scoped lang="scss">
-.image {
-  border-radius: 8px;
-}
-.description {
-  width: 100%;
-}
-.title {
-  width: 100%;
-}
-</style>
+<style scoped lang="scss"></style>

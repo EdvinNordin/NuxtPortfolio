@@ -16,6 +16,7 @@ onMounted(async () => {
 </script>
 <template>
   <div>
+    <HeaderSection />
     <InfoProject :project="project" />
   </div>
 </template>

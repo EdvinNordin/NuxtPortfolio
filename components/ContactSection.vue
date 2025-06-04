@@ -1,7 +1,7 @@
 <template>
-  <div class="bg-zinc-700">
-    <h3 class="text-zinc-300 text-xl p-5">Contact Me</h3>
-    <p class="text-zinc-300 text-lg p-5">
+  <div class="bg-neutral-950">
+    <h3 class="text-3xl p-5 text-lime-200">Contact Me</h3>
+    <p class="text-lg pl-5 pb-5">
       Email: nordin.edvin@gmail.com<br />
       Phone: +46 70 214 9873<br />
       LinkedIn:
