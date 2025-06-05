@@ -3,7 +3,7 @@
   <div>
     <HeroSection />
     <ProjectsSection />
-    <AboutSection />
+    <!-- <AboutSection /> -->
   </div>
 </template>
 
