@@ -2,7 +2,7 @@
 
 <template>
   <div
-    class="flex flex-col md:flex-row w-7/8 md:w-3/4 mx-auto my-70 md:my-90 justify-around gap-30"
+    class="flex flex-col md:flex-row w-7/8 md:w-3/4 mx-auto my-70 md:my-70 justify-around gap-30"
   >
     <div class="flex flex-col items-center">
       <h1 class="text-6xl primary font-bold">Edvin Nordin</h1>
