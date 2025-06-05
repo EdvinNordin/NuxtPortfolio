@@ -13,19 +13,18 @@ function formatName(name) {
 
 <template>
   <div>
-    <NuxtLink class="" :to="`/${project.name}`">
-      <div
-        class="flex flex-col h-[300px] overflow-hidden hover:border-2 border-green-400 background"
-      >
+    <NuxtLink :to="`/${project.name}`">
+      <div class="flex flex-col w-[450px] overflow-hidden test background">
         <img
           :src="project.image"
           :alt="project.name"
-          class="object-cover h-full"
+          class="object-cover h-[300px]"
         />
-
-        <h2 class="text-2xl font-bold text-center h-[50px]">
-          {{ formatName(project.name) }}
-        </h2>
+        <div class="text-center items-center h-[50px] justify-center flex">
+          <h2 class="text-2xl font-bold">
+            {{ formatName(project.name) }}
+          </h2>
+        </div>
       </div>
     </NuxtLink>
   </div>
@@ -34,5 +33,11 @@ function formatName(name) {
 <style lang="scss">
 a:hover {
   background: none;
+}
+.test:hover {
+  box-shadow: 0px 0px 0px 2px var(--color-green-400);
+  /* border: 2px solid;
+  outline-offset: -2px;
+  border-color: var(--color-green-400); */
 }
 </style>
