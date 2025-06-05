@@ -12,11 +12,11 @@ onMounted(() => {
 });
 </script>
 <template>
-  <div class="w-7/8 mx-auto md:w-full">
-    <h2 class="text-5xl">Projects</h2>
-    <div class="md:bg-neutral-800 w-8/8 mx-auto py-10 md:p-16">
+  <div class="w-7/8 md:w-full mx-auto">
+    <h2 class="text-5xl md:pl-25">Projects</h2>
+    <div class="w-8/8 mx-auto py-10 md:p-16 md:bg-neutral-800">
       <div
-        class="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 gap-16 md:w-7/8 mx-auto"
+        class="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-16 md:w-7/8 mx-auto"
       >
         <div v-for="project in projects" :key="project.name">
           <ProjectCard :project="project" />
