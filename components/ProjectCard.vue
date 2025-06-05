@@ -15,7 +15,7 @@ function formatName(name) {
   <div>
     <NuxtLink class="" :to="`/${project.name}`">
       <div
-        class="flex flex-col h-[300px] overflow-hidden border-1-black background"
+        class="flex flex-col h-[300px] overflow-hidden hover:border-2 border-green-400 background"
       >
         <img
           :src="project.image"
