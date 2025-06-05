@@ -16,7 +16,7 @@ onMounted(() => {
     <h2 class="text-5xl w-7/8 mx-auto">Projects</h2>
     <div class="md:bg-neutral-800 w-8/8 mx-auto py-10 md:p-16">
       <div
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-36 w-7/8 mx-auto"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 w-7/8 mx-auto"
       >
         <div v-for="project in projects" :key="project.name">
           <ProjectCard :project="project" />
