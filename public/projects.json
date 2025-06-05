@@ -1,63 +1,63 @@
 [
   {
     "name": "Fluid_Simulations",
-    "description": "Worked with Pugstorm on my master thesis and looked into improving and comparing different fluid simulation for their game Corekeeper.",
+    "description": "This project focused on integrating real-time, physics-based fluid simulation into a stylized 2D pixel-art game using GPU compute shaders. The goal was to replace a simple Wave Equation (WE) simulation with more advanced methods based on Navier-Stokes (NS) and Lattice Boltzmann (LB) fluid dynamics. A key part of the work was developing efficient compute shader implementations in Unity to run complex simulations entirely on the GPU, allowing for: Parallel processing of fluid behavior across the simulation grid, Real-time visual feedback at stable frame rates, Dynamic parameter adjustments through a custom UI. The NS method, despite its complexity, was adapted for a 2D game engine and showed clear advantages in visual realism. Performance profiling revealed that projection and advection steps were the most computationally intensive, but still manageable under reasonable iteration counts. The LB method, though implemented, was ultimately unsuitable due to instability under volatile inputs. This work demonstrates how GPU-accelerated fluid simulation can bring visually rich, dynamic systems to environments with tight performance constraints—especially relevant for games that combine pixel art with advanced interactivity.",
     "image": "/corekeeper.jpg",
     "youtube": "https://www.youtube.com/embed/4EYvU9BU2FA",
     "github": "https://github.com/EdvinNordin/Substance-Simulation"
   },
   {
     "name": "WebFighting",
-    "description": "Web-based 3D-Multiplayer game in the works! Using ThreeJS for graphics and physics and SocketIO for network logic.",
+    "description": "I am currently developing an exciting web-based 3D multiplayer game! Utilizing ThreeJS with TypeScript, we're crafting stunning visuals and custom physics to bring the game to life. SocketIO powers our multiplayer connectivity, allowing players to join the same server seamlessly. Dive into a thrilling PvP deathmatch where players engage in intense, all-against-all combat inspired by souls-like mechanics. Our intricate models are designed using the iPad app Nomad, with plans to introduce a variety of characters and weapons to enhance gameplay. As players progress, they'll unlock powerful upgrades, striving to become the ultimate warrior. For fans of Dark Souls, imagine an Abyss Watchers simulator—an endless cycle of combat and rebirth. Get ready for an immersive experience!",
     "image": "/web.png",
     "link": "https://webfighting.onrender.com/",
     "github": "https://github.com/EdvinNordin/WebFighting"
   },
   {
     "name": "Tabs-Share",
-    "description": "Simple guitar tabulature website made for me and my dad to share tabs. Made using the MERN-Stack.",
+    "description": "I've developed a user-friendly guitar tablature sharing website designed to facilitate easy tab sharing between my dad and me. The platform allows for seamless addition, editing, and removal of tabs. Built as a full-stack application using the MERN stack, it features sleek styling with TailwindCSS. This project sparked my passion for modern web development and significantly deepened my understanding of the full-stack ecosystem. From mastering React hooks to implementing RESTful APIs, I've gained comprehensive insights into both front-end and back-end technologies. Originally created for a school assignment, I later revamped and refined the website in my spare time to transform it into a practical, fully functional tool.",
     "image": "/tab.png",
     "link": "https://tabs-share.onrender.com/",
     "github": "https://github.com/EdvinNordin/Tabs-Share"
   },
   {
     "name": "PokeChart",
-    "description": "Pokemon graph and visualization for a data visualization course, made with Python and its libraries: Bokeh and Pands.",
+    "description": "The PokéChart project is an interactive tool designed to help users visualize and compare the statistics of 980 different Pokémon. Using a dataset from Kaggle, the visualization employs a combination of scatter plots and a parallel coordinate plot to represent complex, multivariable data in an understandable way. The primary goal was to create a tool to find stronger Pokémon by comparing their stats, which include HP, attack, special attack, defense, special defense, and speed. To prevent overwhelming the user, key features like filtering by type, generation, and status (e.g., legendary, mythical) were implemented, allowing users to reduce clutter and focus on relevant comparisons. The visualization is highly interactive; hovering over a point in a scatter plot or a line in the parallel coordinate plot highlights the corresponding Pokémon in the other plot and reveals a pop-up with its image, name, Pokédex number, and a bar chart of its specific stats. The project was built using Python with the Bokeh and Pandas libraries, which enabled the automatic linking between plots and the creation of an interactive web-based visualization. The final result is an effective tool that allows for detailed comparison and the discovery of patterns, such as the tendency for fighting-type Pokémon to have high attack but low special attack stats.",
     "image": "/poke.png",
-    "link": "https://edvinnordin.github.io/PokeChart/main.html",
+    "link": "thepokechart.netlify.app",
     "github": "https://github.com/EdvinNordin/PokeChart"
   },
   {
     "name": "Corporate_Combat",
-    "description": "AR multiplayer strategy game created in Unity with classmates for my bachelor project.",
+    "description": "In this thesis project, I was part of a seven-person team that developed Corporate Combat, a multiplayer strategy game built in Augmented Reality (AR) for mobile devices. The game blends digital and physical spaces by projecting a virtual game board onto real-world surfaces, allowing players to interact in real time through their mobile devices. Built in Unity with C#, the game uses AR Foundation for environment tracking and Photon for networked multiplayer. Players choose cards that represent different units—such as tanks, towers, and energy sources—and compete in teams to destroy the opponent’s base using strategic placement and resource management. My main contributions focused on core game mechanics and audio design. I developed key systems for how units behave—such as movement, targeting, attacking, and health—ensuring that each interaction felt responsive and balanced. In addition, I composed and produced the game’s original soundtrack, crafting both a full and a minimal variation that match the game’s dynamic flow while reinforcing its tactical and immersive atmosphere. User testing showed a clear preference for the AR version over the non-AR mode, with players describing it as more engaging, interactive, and true to the spirit of physical board games. The project offered valuable experience in bringing together gameplay systems, AR technology, and immersive audio to create a cohesive multiplayer experience.",
     "image": "/cc.png",
     "youtube": "https://www.youtube.com/embed/Kk89fXrnZrg",
     "github": "https://github.com/3DJakob/corporate-combat-game"
   },
   {
     "name": "Color_me_Home",
-    "description": "Find you way back home to the woods in this small puzzle game made in Unreal Engine, where you play as a chameleon with different abilities.",
+    "description": "Embark on a captivating journey home to the woods in this enchanting puzzle game, where you take on the role of a chameleon with extraordinary abilities shaped by its surroundings. Developed using Unreal Engine 5 with a blend of C++ and Blueprints, the game introduces a unique mechanic where the chameleon changes color to seamlessly blend into its environment. This ability is crucial for solving intricate puzzles and navigating through a variety of levels, each offering distinct challenges and requiring strategic use of the chameleon's diverse abilities, which vary depending on its color. The game is thoughtfully designed to be accessible and easy to grasp, emphasizing exploration and puzzle-solving over combat. Immerse yourself in a visually stunning world inspired by nature, featuring vibrant colors and meticulously detailed environments that bring the game to life.Originally created as part of a school project, this game highlights my proficiency in game design, programming, level design, and music creation, offering a well-rounded and engaging experience for players of all ages.",
     "image": "/color.png",
     "youtube": "https://www.youtube.com/embed/a1JFtIN9Qpg",
     "github": "https://github.com/EdvinNordin/ColorMeHome"
   },
   {
     "name": "Monte-Carlo_Raytracer",
-    "description": "Custom raytracing renderer made from scratch using the Monte-Carlo raytracing techinque in C++.",
+    "description": "In this project I used an advanced method for rendering photorealistic images by implementing a Monte Carlo ray tracer to simulate the complex behavior of light. Unlike simpler models, this project captures global illumination, including indirect light where rays bounce off surfaces and are affected by their color and material, creating realistic effects like color bleed. The project is based on the Rendering Equation for accurate light calculation. The scene contains objects with varied material properties, such as matte Lambertian surfaces and a fully reflective, mirror-like sphere. To achieve soft shadows, an area light source and multiple shadow rays are used, while a recursive Russian Roulette method optimizes light calculations. The project resulted in highly realistic and immersive images that highlight the effects of global illumination, with the level of photorealism being adjustable by tuning parameters like the number of light bounces and resolution.",
     "image": "/ray.png",
     "document": "MonteCarloRaytracer.pdf",
     "github": "https://github.com/EdvinNordin/Monte-Carlo-Ray-Tracing"
   },
   {
-    "name": "Image_Reproduction",
-    "description": "Reproduction of images using smaller images implemented in Matlab.",
+    "name": "Image_Reconstruction",
+    "description": "As part of the course TNM097, I worked with a team to develop a system for image reconstruction—the process of recreating an image using other images as building blocks.\n     Our goal was to take any given image and rebuild it by replacing small sections with similar-looking photographs from a large image database.\nWe started with a database containing 7,128 nature photos. To manage the dataset efficiently, we applied K-means clustering to group similar images together. \nBy adjusting the number of clusters and their size, we were able to speed up the search process and influence the visual outcome of the reconstructed image.\nOur core contribution was a custom multi-step algorithm:\n    The input image is divided into small cells.\n    For each cell, we search for a number of candidate images with similar color characteristics using the Delta E color difference metric.\n    From these candidates, we choose the one with the most similar structure, evaluated using SSIM (Structural Similarity Index).\n    Finally, all chosen images are assembled into a new, mosaic-like version of the original.\nWe experimented with various parameters to evaluate their effect on quality. This included:\n    Different cell sizes (e.g., 4×4 or 8×8 pixels),\n    Varying the number of candidate images (N = 1, 3, 7, 20),\n    And limiting the number of unique images used in the final output (e.g., 100, 200, or 400).\nThe result is a visually compelling image that resembles the original, but is made entirely from small nature photos.",
     "image": "/image.png",
-    "document": "temp.com",
+    "document": "Image.pdf",
     "github": "https://github.com/JimmyCedervall/TNM097"
   },
   {
     "name": "Portfolio",
-    "description": "The page you're on right now! Made using Nuxt.",
+    "description": "The website you're on right now, made using Nuxt and TailwindCSS. Why don't you take a look around at my other projects?",
     "image": "/EN.png",
     "link": "edvinnordin.netlify.app",
     "github": "https://github.com/EdvinNordin/Vueing"
