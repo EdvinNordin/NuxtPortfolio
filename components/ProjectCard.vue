@@ -21,7 +21,7 @@ function formatName(name) {
           class="object-cover h-[300px]"
         />
         <div class="text-center items-center h-[50px] justify-center flex">
-          <h2 class="text-2xl font-bold">
+          <h2 class="text-lg font-bold">
             {{ formatName(project.name) }}
           </h2>
         </div>
