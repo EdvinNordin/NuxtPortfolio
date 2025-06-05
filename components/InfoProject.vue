@@ -19,19 +19,19 @@ function formatName(name) {
           {{ formatName(project.name) }}
         </h1>
         <div class="md:flex md:flex-row md:w-full justify-between mt-5 gap-10">
-          <p class="md:w-1/2 text-xl">{{ project.description }}</p>
+          <p class="md:w-1/2 text-xl mb-10">{{ project.description }}</p>
           <iframe
             v-if="project.youtube"
             :src="project.youtube"
             frameborder="0"
             allowfullscreen
-            class="md:w-1/2 aspect-video"
+            class="md:w-1/2 w-full aspect-video"
           ></iframe>
           <a
             v-else-if="project.link"
             :href="project.link"
             target="_blank"
-            class="md:w-1/2"
+            class="md:w-1/2 w-full"
           >
             <img
               :src="project.image"
@@ -39,7 +39,12 @@ function formatName(name) {
               class="w-full object-cover"
             />
           </a>
-          <a v-else :href="project.document" target="_blank" class="md:w-1/2">
+          <a
+            v-else
+            :href="project.document"
+            target="_blank"
+            class="md:w-1/2 w-full"
+          >
             <img
               :src="project.image"
               :alt="project.name"
@@ -48,7 +53,7 @@ function formatName(name) {
           </a>
         </div>
         <div class="flex flex-row-reverse my-5">
-          <a :href="project.github" target="_blank" class="w-1/20">
+          <a :href="project.github" target="_blank" class="w-1/10 md:w-1/20">
             <img src="/github.png" alt="Github" />
           </a>
         </div>
