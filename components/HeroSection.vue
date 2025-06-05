@@ -4,7 +4,7 @@
   <div
     class="flex flex-col md:flex-row w-7/8 mx-auto h-[95vh] md:h-[90vh] justify-around md:items-center"
   >
-    <h1 class="text-6xl text-lime-300 w-1/5">Edvin Nordin</h1>
+    <h1 class="text-6xl primary font-bold w-1/5">Edvin Nordin</h1>
     <div class="">
       <h1 class="text-2xl">Your next developer?</h1>
       <h1 class="text-xl">Site is currently under construction!</h1>

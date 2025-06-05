@@ -17,7 +17,7 @@ onMounted(async () => {
 <template>
   <div>
     <HeaderSection />
-    <InfoProject :project="project" />
+    <InfoProject :project="project" class="mt-15" />
   </div>
 </template>
 <style scoped lang="scss"></style>

@@ -1,7 +1,7 @@
 <script setup></script>
 <template>
   <div class="w-4/5 mx-auto">
-    <h2 class="text-3xl pt-5 text-lime-200">Who am I?</h2>
+    <h2 class="text-3xl pt-5">Who am <span class="primary">I</span></h2>
     <p class="text-lg pt-5 mb-10">
       Hello and welcome to my website! I am a 26 years old passionate software
       engineer located in Umeå, Sweden that is always excited to learn new
