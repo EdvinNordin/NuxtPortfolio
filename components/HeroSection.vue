@@ -11,13 +11,14 @@
     <div class="md:w-2/5 items-center">
       <!-- <h1 class="text-xl">Site is currently under construction!</h1> -->
       <p class="text-base items-center">
-        Hello and welcome to my website! I am a 26 years old passionate software
-        engineer located in Umeå, Sweden that is always excited to learn new
-        things! I am intersted in game creation, computer graphics, web building
-        and visulization and have created several projects in these areas. I am
-        currently looking for work as a developer and am open to any
-        opportunities that come my way. Check out some of my projects below if
-        you are interested!
+        Welcome to my website! I'm a 26-year-old passionate software engineer
+        based in Umeå, Sweden, with a keen enthusiasm for learning and
+        innovation. My interests span game development, computer graphics, web
+        development, and data visualization. Throughout my academic and personal
+        projects, I've cultivated a portfolio of work that I'm truly proud of.
+        If you're curious, feel free to explore some of my projects below.
+        Currently, I am seeking new opportunities in the field of software
+        development and am eager to embrace any challenges that come my way.
       </p>
     </div>
   </div>
