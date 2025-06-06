@@ -37,7 +37,7 @@ a:hover {
   background: none;
 }
 .test:hover {
-  box-shadow: 0px 0px 0px 2px var(--color-green-400);
+  box-shadow: 0px 0px 0px 3px var(--color-green-400);
   /* border: 2px solid;
   outline-offset: -2px;
   border-color: var(--color-green-400); */
