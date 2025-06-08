@@ -6,8 +6,18 @@ defineProps({
   },
 });
 
+const gitIcon = ref("/github.png");
+
 function formatName(name) {
   return name.replaceAll("_", " ");
+}
+
+function green() {
+  gitIcon.value = "/githubGreen.png";
+}
+
+function white() {
+  gitIcon.value = "/github.png";
 }
 </script>
 
@@ -53,8 +63,17 @@ function formatName(name) {
           </a>
         </div>
         <div class="flex flex-row-reverse my-5">
-          <a :href="project.github" target="_blank" class="w-1/10 md:w-1/20">
-            <img src="/github.png" alt="Github" />
+          <a
+            :href="project.github"
+            target="_blank"
+            class="w-1/10 md:w-1/20 greenGit"
+          >
+            <img
+              :src="gitIcon"
+              alt="Github"
+              @mouseenter="green()"
+              @mouseleave="white()"
+            />
           </a>
         </div>
       </div>
@@ -63,5 +82,4 @@ function formatName(name) {
 </template>
 
 <style scoped lang="scss"></style>
-
 <!-- link, youtube, document -->

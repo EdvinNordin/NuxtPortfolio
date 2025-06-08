@@ -15,7 +15,7 @@ function formatName(name) {
   <div>
     <NuxtLink :to="`/${project.name}`">
       <div
-        class="flex flex-col w-full md:w-[450px] overflow-hidden test background"
+        class="flex flex-col w-full md:w-[450px] overflow-hidden greenBorder background"
       >
         <img
           :src="project.image"
@@ -36,10 +36,7 @@ function formatName(name) {
 a:hover {
   background: none;
 }
-.test:hover {
+.greenBorder:hover {
   box-shadow: 0px 0px 0px 3px var(--color-green-400);
-  /* border: 2px solid;
-  outline-offset: -2px;
-  border-color: var(--color-green-400); */
 }
 </style>
