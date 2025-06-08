@@ -58,10 +58,6 @@ onMounted(() => {
 onBeforeUnmount(() => {
   clearInterval(scrollInterval);
 });
-
-function formatName(name) {
-  return name.replaceAll("_", " ");
-}
 </script>
 
 <template>
@@ -69,7 +65,7 @@ function formatName(name) {
   <div class="horizontal" @mouseover="hovering" @mouseleave="stopHovering">
     <div v-for="project in projects" :key="project.name" class="mb-5 mx-1">
       <ProjectCard
-        v-if="projectName !== formatName(project.name)"
+        v-if="projectName !== project.name"
         :project="project"
         size="450"
       />
