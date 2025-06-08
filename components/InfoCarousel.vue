@@ -6,7 +6,6 @@ const { projectName } = defineProps({
   },
 });
 
-console.log(projectName);
 const projects = ref([]);
 const scrollForward = ref(true);
 let scrollInterval = null;
@@ -63,8 +62,8 @@ onBeforeUnmount(() => {
 <template>
   <h2 class="text-3xl">Other Projects</h2>
   <div class="horizontal" @mouseover="hovering" @mouseleave="stopHovering">
-    <div v-for="project in projects" :key="project.name" class="mb-5 mx-1">
-      <ProjectCard
+    <div v-for="project in projects" :key="project.name" class="">
+      <InfoCard
         v-if="projectName !== project.name"
         :project="project"
         size="450"

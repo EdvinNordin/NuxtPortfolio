@@ -12,15 +12,15 @@ function formatName(name) {
 </script>
 
 <template>
-  <div>
+  <div class="py-5 mx-2">
     <NuxtLink :to="`/${project.name}`">
       <div
-        class="flex flex-col w-full md:w-[450px] overflow-hidden greenBorder background"
+        class="flex flex-col w-full md:w-[250px] min-w-[250px] overflow-hidden greenBorder background"
       >
         <img
           :src="project.image"
           :alt="project.name"
-          class="object-cover h-[300px]"
+          class="object-cover h-[200px]"
         />
         <div class="text-center items-center h-[50px] justify-center flex">
           <h2 class="text-lg font-bold">
@@ -32,7 +32,7 @@ function formatName(name) {
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss" contained>
 a:hover {
   background: none;
 }
