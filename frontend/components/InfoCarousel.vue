@@ -53,7 +53,7 @@ onMounted(() => {
   
 });
 const {data, error} = await useAsyncData("projects", () =>
-  $fetch('http://localhost:5175/projects')
+  $fetch('https://portfoliobackend-gvfwd3g0cpabghdx.swedencentral-01.azurewebsites.net/projects')
   
 );
 

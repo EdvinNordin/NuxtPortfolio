@@ -5,7 +5,7 @@ const projectName = route.params.project;
 console.log("Data name:", projectName);
 
 const {data, error} = await useAsyncData("project", () =>
-  $fetch('http://localhost:5175/projects/' + projectName)
+  $fetch('https://portfoliobackend-gvfwd3g0cpabghdx.swedencentral-01.azurewebsites.net/projects/' + projectName)
 );
 
 function formatName(name) {
