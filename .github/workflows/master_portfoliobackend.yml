@@ -35,6 +35,9 @@ jobs:
           name: .net-app
           path: ./publish
 
+      - name: List files for debug
+        run: dir .\.net-app\
+
   deploy:
     runs-on: windows-latest
     needs: build
@@ -54,5 +57,5 @@ jobs:
         with:
           app-name: 'PortfolioBackend'
           slot-name: 'Production'
-          package: ./.net-app
+          package: ./.net-app/
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_75AEC7ACC9CC4CE58D8F6A7F2CC179E5 }}
