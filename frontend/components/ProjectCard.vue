@@ -15,12 +15,12 @@ function formatName(name) {
   <div>
     <NuxtLink :to="`/${project.name}`">
       <div
-        class="flex flex-col w-full md:w-[450px] overflow-hidden greenBorder background"
+        class="flex flex-col w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg overflow-hidden greenBorder background mx-auto"
       >
         <img
           :src="project.image"
           :alt="project.name"
-          class="object-cover h-[300px]"
+          class="object-cover w-full h-48 sm:h-56 md:h-64"
         />
         <div class="text-center items-center h-[50px] justify-center flex">
           <h2 class="text-lg font-bold">

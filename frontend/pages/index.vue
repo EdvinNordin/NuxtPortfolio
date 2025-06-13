@@ -1,4 +1,8 @@
-<script setup></script>
+<script setup>
+useHead({
+  title: 'Edvin Nordin'
+});
+</script>
 <template>
   <div>
     <HeroSection />

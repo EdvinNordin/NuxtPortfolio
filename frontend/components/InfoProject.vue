@@ -1,11 +1,15 @@
 <script setup>
 
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
 const route = useRoute();
 const projectName = route.params.project;
-console.log("Data name:", projectName);
+
+useHead({
+  title: formatName(projectName) + " - Edvin Nordin"
+});
 
 const {data, error} = await useAsyncData("project", () =>
-  $fetch('https://portfoliobackend-gvfwd3g0cpabghdx.swedencentral-01.azurewebsites.net/projects/' + projectName)
+  $fetch(backendUrl + '/projects/' + projectName)
 );
 
 function formatName(name) {

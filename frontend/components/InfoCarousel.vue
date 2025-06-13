@@ -1,65 +1,63 @@
 <script setup>
-
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
 const route = useRoute();
 const projectName = route.params.project;
 
-
-
 const scrollForward = ref(true);
-let scrollInterval = null;
+let scrollAnimation = null;
+let autoScrollTimeout = false;
 
-function startAutoScroll() {
-  nextTick(() => {
+function autoScroll() {
     // Only auto-scroll if not on mobile
     if (window.innerWidth < 769) return;
+
     const container = document.querySelector(".horizontal");
     if (!container) return;
-    scrollInterval = setInterval(() => {
+    
       if (scrollForward.value) {
-        container.scrollBy({ left: 10, behavior: "smooth" });
+        container.scrollBy({ left: 2, behavior: "smooth" });
       } else {
-        container.scrollBy({ left: -10, behavior: "smooth" });
+        container.scrollBy({ left: -2, behavior: "smooth" });
       }
+
       if (
-        container.scrollLeft + container.clientWidth >=
-        container.scrollWidth
-      ) {
+        container.scrollLeft + container.clientWidth >= container.scrollWidth ){
         scrollForward.value = false;
       }
       if (container.scrollLeft <= 0) {
         scrollForward.value = true;
       }
-    }, 20); // Adjust speed by changing the interval
-  });
+    
+    scrollAnimation = requestAnimationFrame(autoScroll);
+    
 }
+
 function hovering() {
-  clearInterval(scrollInterval);
+  if (scrollAnimation) {
+    cancelAnimationFrame(scrollAnimation);
+    scrollAnimation = null;
+  }
 }
 function stopHovering() {
-  scrollInterval = setTimeout(() => {
-    startAutoScroll();
-  }, 2000); // Adjust delay before resuming auto-scroll
+  setTimeout(() => {
+    autoScroll();
+  }, 2000);
 }
+
 onMounted(() => {
-  /*fetch("/projects.json")
-    .then((response) => response.json())
-    .then((data) => {
-      projects.value = data;
-    })
-    .catch((error) => {
-      console.error("Error loading the JSON file:", error);
-    });*/
-  startAutoScroll();
-  
+  autoScroll();
 });
+
+onBeforeUnmount(() => {
+    cancelAnimationFrame(scrollAnimation);
+    scrollAnimation = null;
+});
+
 const {data, error} = await useAsyncData("projects", () =>
-  $fetch('https://portfoliobackend-gvfwd3g0cpabghdx.swedencentral-01.azurewebsites.net/projects')
+  $fetch(backendUrl + '/projects')
   
 );
 
-onBeforeUnmount(() => {
-  clearInterval(scrollInterval);
-});
 </script>
 
 <template>

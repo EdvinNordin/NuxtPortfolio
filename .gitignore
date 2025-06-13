@@ -22,3 +22,34 @@ logs
 .env
 .env.*
 !.env.example
+
+# Build results
+bin/
+obj/
+out/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code
+.vscode/
+
+# Rider
+.idea/
+
+# OS generated files
+Thumbs.db
+
+# Publish output
+publish/
+wwwroot/dist/
+
+# Secrets (if any)
+appsettings.Development.json
+secrets.json
+
+# Others
+*.db
