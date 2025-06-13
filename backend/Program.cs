@@ -18,7 +18,7 @@ var app = builder.Build();
 
 app.UseCors("AllowFrontend");
 
-app.Urls.Add("http://localhost:5175");
+app.Urls.Add("https://portfoliobackend-gvfwd3g0cpabghdx.swedencentral-01.azurewebsites.net/");
 
 async Task<object> json()
 {
