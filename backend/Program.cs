@@ -48,5 +48,7 @@ app.MapGet("/projects/{name}", async (string name) =>
     return Results.NotFound();
 });
 
+app.MapGet("/", () => "Welcome to the Projects API!");
+
 
 app.Run();
