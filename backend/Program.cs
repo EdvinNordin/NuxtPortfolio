@@ -10,9 +10,9 @@ builder.Services.AddCors(options =>
                       {
                           policy.WithOrigins(
                             "http://localhost:3000",
-                            "http://www.edvinnordin.me",
-                            "http://edvinnordin.me",
-                            "http://edvinnordin.netlify.app"
+                            "https://www.edvinnordin.me",
+                            "https://edvinnordin.me",
+                            "https://edvinnordin.netlify.app"
                         )
                             .AllowAnyHeader()
                             .AllowAnyMethod();
