@@ -51,8 +51,8 @@ jobs:
         with:
           name: .net-app
           
-      - name: List files for debug
-        run: dir ./.net-app/
+      - name: List all files and folders
+        run: dir /s
       
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
@@ -60,5 +60,5 @@ jobs:
         with:
           app-name: 'PortfolioBackend'
           slot-name: 'Production'
-          package: ./.net-app/
+          package: .
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_75AEC7ACC9CC4CE58D8F6A7F2CC179E5 }}
