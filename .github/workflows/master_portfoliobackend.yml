@@ -29,6 +29,9 @@ jobs:
       - name: dotnet publish
         run: dotnet publish backend/backend.csproj --configuration Release --output ./publish
 
+      - name: List files in publish for debug
+        run: dir ./publish
+
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
