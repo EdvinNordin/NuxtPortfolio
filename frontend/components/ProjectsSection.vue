@@ -1,5 +1,5 @@
 <script setup>
-const projects = ref([]);
+/*const projects = ref([]);
 onMounted(() => {
   fetch("/projects.json")
     .then((response) => response.json())
@@ -9,7 +9,11 @@ onMounted(() => {
     .catch((error) => {
       console.error("Error loading the JSON file:", error);
     });
-});
+});*/
+const {data, error} = await useAsyncData("projects", () =>
+  $fetch('http://localhost:5175/projects')
+  
+);
 </script>
 <template>
   <div class="w-7/8 mx-auto md:w-full">
@@ -18,7 +22,7 @@ onMounted(() => {
       <div
         class="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-16 md:w-7/8 mx-auto"
       >
-        <div v-for="project in projects" :key="project.name">
+        <div v-for="project in data" :key="project.name">
           <ProjectCard :project="project" />
         </div>
       </div>

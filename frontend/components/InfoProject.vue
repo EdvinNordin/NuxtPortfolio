@@ -1,12 +1,12 @@
 <script setup>
-defineProps({
-  project: {
-    type: Object,
-    default: () => ({}),
-  },
-});
 
-const gitIcon = ref("/github.svg");
+const route = useRoute();
+const projectName = route.params.project;
+console.log("Data name:", projectName);
+
+const {data, error} = await useAsyncData("project", () =>
+  $fetch('http://localhost:5175/projects/' + projectName)
+);
 
 function formatName(name) {
   return name.replaceAll("_", " ");
@@ -14,49 +14,49 @@ function formatName(name) {
 </script>
 
 <template>
-  <div v-if="project && project.name" class="">
+  <div v-if="data && data.name" class="">
     <div class="flex flex-col w-7/8 md:w-3/4 mx-auto">
       <div>
         <h1 class="text-5xl primary font-bold">
-          {{ formatName(project.name) }}
+          {{ formatName(data.name) }}
         </h1>
         <div class="md:flex md:flex-row md:w-full justify-between mt-5 gap-10">
-          <p class="md:w-1/2 text-xl mb-10">{{ project.description }}</p>
+          <p class="md:w-1/2 text-xl mb-10">{{ data.description }}</p>
           <iframe
-            v-if="project.youtube"
-            :src="project.youtube"
+            v-if="data.youtube"
+            :src="data.youtube"
             frameborder="0"
             allowfullscreen
             class="md:w-1/2 w-full aspect-video"
           ></iframe>
           <a
-            v-else-if="project.link"
-            :href="project.link"
+            v-else-if="data.link"
+            :href="data.link"
             target="_blank"
             class="md:w-1/2 w-full"
           >
             <img
-              :src="project.image"
-              :alt="project.name"
+              :src="data.image"
+              :alt="data.name"
               class="w-full object-cover"
             />
           </a>
           <a
             v-else
-            :href="project.document"
+            :href="data.document"
             target="_blank"
             class="md:w-1/2 w-full"
           >
             <img
-              :src="project.image"
-              :alt="project.name"
+              :src="data.image"
+              :alt="data.name"
               class="w-full object-cover"
             />
           </a>
         </div>
         <div class="flex flex-row-reverse my-5">
           <a
-            :href="project.github"
+            :href="data.github"
             target="_blank"
             class="text-green-100 hover:text-green-400 transition-colors"
           >

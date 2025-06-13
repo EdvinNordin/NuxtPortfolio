@@ -1,28 +1,52 @@
-var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddControllers();
+using System.Text.Json;
+
+var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowNuxtApp",
-        policy => policy.WithOrigins("http://localhost:3000") // Nuxt dev server
-                        .AllowAnyHeader()
-                        .AllowAnyMethod());
+    options.AddPolicy(name: "AllowFrontend",
+                      policy =>
+                      {
+                          policy.WithOrigins("http://localhost:3000", "http://www.edvinnordin.me")
+                            .AllowAnyHeader()
+                            .AllowAnyMethod();
+                      });
 });
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+app.UseCors("AllowFrontend");
+
+app.Urls.Add("http://localhost:5175");
+
+async Task<object> json()
 {
-    // ...other dev-only code...
+    var json = await File.ReadAllTextAsync("projects.json");
+    return JsonSerializer.Deserialize<object>(json);
 }
 
-app.UseHttpsRedirection();
+app.MapGet("/projects", async () =>
+{
+    var json = await File.ReadAllTextAsync("projects.json");
+    var projects = JsonSerializer.Deserialize<object>(json);
+    return projects;
+    //return json();
+});
 
-app.UseCors("AllowNuxtApp");
+app.MapGet("/projects/{name}", async (string name) =>
+{
 
-app.MapControllers(); // <-- This now works
+    var projects = await json();
+    foreach (var project in ((JsonElement)projects).EnumerateArray())
+    {
+        if (project.GetProperty("name").GetString() == name)
+        {
+            return Results.Ok(project);
+        }
+    }
+    return Results.NotFound();
+});
+
 
 app.Run();

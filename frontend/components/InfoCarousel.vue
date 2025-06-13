@@ -1,12 +1,10 @@
 <script setup>
-const { projectName } = defineProps({
-  projectName: {
-    type: String,
-    default: "",
-  },
-});
 
-const projects = ref([]);
+const route = useRoute();
+const projectName = route.params.project;
+
+
+
 const scrollForward = ref(true);
 let scrollInterval = null;
 
@@ -43,16 +41,21 @@ function stopHovering() {
   }, 2000); // Adjust delay before resuming auto-scroll
 }
 onMounted(() => {
-  fetch("/projects.json")
+  /*fetch("/projects.json")
     .then((response) => response.json())
     .then((data) => {
       projects.value = data;
     })
     .catch((error) => {
       console.error("Error loading the JSON file:", error);
-    });
+    });*/
   startAutoScroll();
+  
 });
+const {data, error} = await useAsyncData("projects", () =>
+  $fetch('http://localhost:5175/projects')
+  
+);
 
 onBeforeUnmount(() => {
   clearInterval(scrollInterval);
@@ -62,7 +65,7 @@ onBeforeUnmount(() => {
 <template>
   <h2 class="text-3xl">Other Projects</h2>
   <div class="horizontal" @mouseover="hovering" @mouseleave="stopHovering">
-    <div v-for="project in projects" :key="project.name" class="">
+    <div v-for="project in data" :key="project.name" class="">
       <InfoCard
         v-if="projectName !== project.name"
         :project="project"

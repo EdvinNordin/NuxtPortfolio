@@ -6,9 +6,6 @@ defineProps({
   },
 });
 
-const { data, error } = await useAsyncData('weather', () =>
-  $fetch('/weatherforecast')
-);
 
 function formatName(name) {
   return name.replaceAll("_", " ");
@@ -17,7 +14,6 @@ function formatName(name) {
 
 <template>
   <div class="py-5 mx-2">
-    <h1>{{ data }}</h1>
     <NuxtLink :to="`/${project.name}`">
       <div class="flex flex-col w-full md:w-[250px] min-w-[250px] overflow-hidden greenBorder background">
         <img :src="project.image" :alt="project.name" class="object-cover h-[200px]" />
