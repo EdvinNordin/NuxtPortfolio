@@ -38,9 +38,6 @@ jobs:
           name: .net-app
           path: ./publish
 
-      - name: List files for debug
-        run: dir ./.net-app/
-
   deploy:
     runs-on: windows-latest
     needs: build
@@ -53,6 +50,9 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: .net-app
+          
+      - name: List files for debug
+        run: dir ./.net-app/
       
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
