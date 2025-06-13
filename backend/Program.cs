@@ -8,7 +8,12 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: "AllowFrontend",
                       policy =>
                       {
-                          policy.WithOrigins("http://localhost:3000", "http://www.edvinnordin.me", "edvinnordin.me", "edvinnordin.netlify.app")
+                          policy.WithOrigins(
+                            "http://localhost:3000",
+                            "http://www.edvinnordin.me",
+                            "http://edvinnordin.me",
+                            "http://edvinnordin.netlify.app"
+                        )
                             .AllowAnyHeader()
                             .AllowAnyMethod();
                       });
