@@ -39,7 +39,7 @@ jobs:
           path: ./publish
 
       - name: List files for debug
-        run: dir .\.net-app\
+        run: dir ./.net-app/
 
   deploy:
     runs-on: windows-latest
