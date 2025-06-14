@@ -19,10 +19,10 @@ const {data, error} = await useAsyncData("projects", () =>
 </script>
 <template>
   <div class="w-7/8 mx-auto md:w-full">
-    <h2 class="text-5xl pl-5">Projects</h2>
+    <h2 class="text-5xl md:pl-5">Projects</h2>
     <div class="py-10 md:p-26 md:bg-neutral-800">
       <div
-        class="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full max-w-7xl mx-auto px-4"
+        class="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full max-w-7xl mx-auto md:px-4"
       >
         <div v-for="project in data" :key="project.name">
           <ProjectCard :project="project" />
