@@ -25,7 +25,7 @@ function formatName(name) {
           {{ formatName(data.name) }}
         </h1>
         <div class="md:flex md:flex-row md:w-full justify-between mt-5 gap-10">
-          <p class="md:w-1/2 text-xl mb-10">{{ data.description }}</p>
+          <p class="text-base sm:text-lg md:text-xl mb-10">{{ data.description }}</p>
           <iframe
             v-if="data.youtube"
             :src="data.youtube"
