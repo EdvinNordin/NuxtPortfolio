@@ -3,13 +3,15 @@
 const backendUrl = import.meta.env.VITE_BACKEND_URL;
 const route = useRoute();
 const projectName = route.params.project;
+let project = ref({});
 
 useHead({
   title: formatName(projectName) + " - Edvin Nordin"
 });
 
-const {data, error} = await useAsyncData("project", () =>
-  $fetch(backendUrl + '/projects/' + projectName)
+const { data, error } = await useAsyncData(
+  () => route.params.project,
+  () => $fetch(backendUrl + '/projects/' + route.params.project)
 );
 
 function formatName(name) {
@@ -25,7 +27,7 @@ function formatName(name) {
           {{ formatName(data.name) }}
         </h1>
         <div class="md:flex md:flex-row md:w-full justify-between mt-5 gap-10">
-          <p class="text-base sm:text-lg md:text-xl mb-10">{{ data.description }}</p>
+          <p class="md:w-1/2 text-xl mb-10">{{ data.description }}</p>
           <iframe
             v-if="data.youtube"
             :src="data.youtube"
