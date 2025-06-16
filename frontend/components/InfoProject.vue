@@ -1,20 +1,31 @@
-<script setup>
+<script setup lang="ts">
 
 const backendUrl = import.meta.env.VITE_BACKEND_URL;
 const route = useRoute();
-const projectName = route.params.project;
-let project = ref({});
+const projectName = Array.isArray(route.params.project)
+  ? route.params.project.join('/')
+  : route.params.project as string;
+
+interface data {
+  name: string;
+  description: string;
+  image: string;
+  youtube?: string;
+  link?: string;
+  document?: string;
+  github?: string;
+}
 
 useHead({
   title: formatName(projectName) + " - Edvin Nordin"
 });
 
-const { data, error } = await useAsyncData(
-  () => route.params.project,
-  () => $fetch(backendUrl + '/projects/' + route.params.project)
+const { data, error } = await useAsyncData<data>(
+  () => projectName,
+  () => $fetch<data>(backendUrl + '/projects/' + projectName)
 );
 
-function formatName(name) {
+function formatName(name: string) {
   return name.replaceAll("_", " ");
 }
 </script>

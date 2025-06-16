@@ -1,18 +1,12 @@
-<script setup>
-/*const projects = ref([]);
-onMounted(() => {
-  fetch("/projects.json")
-    .then((response) => response.json())
-    .then((data) => {
-      projects.value = data;
-    })
-    .catch((error) => {
-      console.error("Error loading the JSON file:", error);
-    });
-});*/
+<script setup lang="ts">
+
+interface Project {
+  name: string;
+  // Add other properties of your project as needed
+}
 
 const backendUrl = import.meta.env.VITE_BACKEND_URL;
-const {data, error} = await useAsyncData("projects", () =>
+const {data, error} = await useAsyncData<Project[]>("projects", () =>
   $fetch(backendUrl + '/projects')
   
 );

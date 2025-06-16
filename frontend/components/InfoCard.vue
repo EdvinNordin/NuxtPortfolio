@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 defineProps({
   project: {
     type: Object,
@@ -7,7 +7,7 @@ defineProps({
 });
 
 
-function formatName(name) {
+function formatName(name: string) {
   return name.replaceAll("_", " ");
 }
 </script>

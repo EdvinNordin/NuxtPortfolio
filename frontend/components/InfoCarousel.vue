@@ -1,11 +1,10 @@
-<script setup>
+<script setup lang="ts">
 const backendUrl = import.meta.env.VITE_BACKEND_URL;
 const route = useRoute();
 const projectName = route.params.project;
 
 const scrollForward = ref(true);
-let scrollAnimation = null;
-let autoScrollTimeout = false;
+let scrollAnimation: number | null = null;
 
 function autoScroll() {
     // Only auto-scroll if not on mobile
@@ -49,13 +48,17 @@ onMounted(() => {
 });
 
 onBeforeUnmount(() => {
-    cancelAnimationFrame(scrollAnimation);
+  if (scrollAnimation) cancelAnimationFrame(scrollAnimation);
     scrollAnimation = null;
 });
 
-const {data, error} = await useAsyncData("projects", () =>
-  $fetch(backendUrl + '/projects')
-  
+interface Project {
+  name: string;
+  image: string;
+}
+
+const { data, error } = await useAsyncData<Project[]>("projects", () =>
+  $fetch<Project[]>(backendUrl + '/projects')
 );
 
 </script>
