@@ -9,7 +9,7 @@
   {
     "name": "WebFighting",
     "description": "I am currently developing an exciting web-based 3D multiplayer game! Utilizing ThreeJS with TypeScript, we're crafting stunning visuals and custom physics to bring the game to life. SocketIO powers our multiplayer connectivity, allowing players to join the same server seamlessly. Dive into a thrilling PvP deathmatch where players engage in intense, all-against-all combat inspired by souls-like mechanics. Our intricate models are designed using the iPad app Nomad, with plans to introduce a variety of characters and weapons to enhance gameplay. As players progress, they'll unlock powerful upgrades, striving to become the ultimate warrior. For fans of Dark Souls, imagine an Abyss Watchers simulator: an endless cycle of combat and rebirth. Get ready for an immersive experience! I am using the free plan on render for the hosting of both the frontend and backend so if no tabs are shown on the website please wait a minute for the server to wake up.",
-    "image": "/web.png",
+    "image": "/webv2.png",
     "link": "https://webfighting.onrender.com/",
     "github": "https://github.com/EdvinNordin/WebFighting"
   },
