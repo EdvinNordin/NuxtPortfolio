@@ -2,7 +2,7 @@
   {
     "name": "WebFighting",
     "description": "I am currently developing an exciting web-based 3D multiplayer game! Utilizing ThreeJS and RapierJS with TypeScript and Asp.Net Core for the backend.",
-    "image": "/web.png",
+    "image": "/webv2.png",
     "link": "https://webfighting.onrender.com/",
     "github": "https://github.com/EdvinNordin/WebFighting"
   },
