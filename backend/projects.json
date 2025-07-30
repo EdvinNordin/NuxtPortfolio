@@ -1,9 +1,9 @@
 [
   {
-    "name": "WebFighting",
+    "name": "Shiba Fencing",
     "description": "I am currently developing an exciting web-based 3D multiplayer game! Utilizing ThreeJS and RapierJS with TypeScript and Asp.Net Core for the backend.",
     "image": "/webv2.png",
-    "link": "https://webfighting.onrender.com/",
+    "link": "https://game.edvinnordin.me/",
     "github": "https://github.com/EdvinNordin/WebFighting"
   },
   {
