@@ -14,10 +14,10 @@
     "github": "https://github.com/EdvinNordin/Substance-Simulation"
   },
   {
-    "name": "Tabs-Share",
+    "name": "Tab Share",
     "description": "I've developed a user-friendly guitar tablature sharing website designed to facilitate easy tab sharing between my dad and me. The platform allows for seamless addition, editing, and removal of tabs. Built as a full-stack application using the MERN stack, it features sleek styling with TailwindCSS. This project sparked my passion for modern web development and significantly deepened my understanding of the full-stack ecosystem. From mastering React hooks to implementing RESTful APIs, I've gained comprehensive insights into both front-end and back-end technologies. Originally created for a school assignment, I later revamped and refined the website in my spare time to transform it into a practical, fully functional tool. I am using the free plan on render for the hosting of both the frontend and backend so if no tabs are shown on the website please wait a minute for the server to wake up.",
     "image": "/tab.png",
-    "link": "https://tabs-share.onrender.com/",
+    "link": "https://tabshare.edvinnordin.me",
     "github": "https://github.com/EdvinNordin/Tabs-Share"
   },
   {
