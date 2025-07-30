@@ -24,7 +24,7 @@
     "name": "PokeChart",
     "description": "The PokéChart project is an interactive tool designed to help users visualize and compare the statistics of 980 different Pokémon. Using a dataset from Kaggle, the visualization employs a combination of scatter plots and a parallel coordinate plot to represent complex, multivariable data in an understandable way. The primary goal was to create a tool to find stronger Pokémon by comparing their stats, which include HP, attack, special attack, defense, special defense, and speed. To prevent overwhelming the user, key features like filtering by type, generation, and status (e.g., legendary, mythical) were implemented, allowing users to reduce clutter and focus on relevant comparisons. The visualization is highly interactive; hovering over a point in a scatter plot or a line in the parallel coordinate plot highlights the corresponding Pokémon in the other plot and reveals a pop-up with its image, name, Pokédex number, and a bar chart of its specific stats. The project was built using Python with the Bokeh and Pandas libraries, which enabled the automatic linking between plots and the creation of an interactive web-based visualization. The final result is an effective tool that allows for detailed comparison and the discovery of patterns, such as the tendency for fighting-type Pokémon to have high attack but low special attack stats. The server is not currently running, but the code is available on GitHub for anyone interested in exploring or contributing to the project.",
     "image": "/poke.png",
-    "link": "https://pokechart-222935716757.europe-north2.run.app/main",
+    "link": "https://pokechart.edvinnordin.me/",
     "github": "https://github.com/EdvinNordin/PokeChart"
   },
   {
