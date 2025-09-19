@@ -1,7 +1,7 @@
 [
   {
     "name": "Shiba_Fencing",
-    "description": "I am currently developing an exciting web-based 3D multiplayer game! Utilizing ThreeJS and RapierJS with TypeScript and Asp.Net Core for the backend.",
+    "description": "I am currently developing a fun web-based 3D multiplayer game! The game is made utilizing ThreeJS with TypeScript for the frontend and Asp.Net Core and Supabase for the backend and database. The game uses a pvp arena style where players control a shiba inu wielding a sword to knock opponents out of the arena or reduce their health to zero to get as high of a killstreak as possible to top the leaderboard. It works on both desktop and mobile devices, with touch controls for mobile users and if you don't want to play with others there is a automatic singleplayer mode when you are the only one loaded. The singleplayer mode spawns a bot that will fight against you with two difficulty levels: easy and hard. There is a lot more I want to implement in the future, such as different weapons, environments and other features, so stay tuned!",
     "image": "/webv2.png",
     "link": "https://game.edvinnordin.me/",
     "github": "https://github.com/EdvinNordin/WebFighting"
@@ -57,9 +57,9 @@
   },
   {
     "name": "Portfolio",
-    "description": "The website you're on right now, made using Nuxt and TailwindCSS. Why don't you take a look around at my other projects?",
+    "description": "The website you're on right now! A simple portfolio site made using Vue with Nuxt and Tailwind. Why don't you take a look around at some of my other projects?",
     "image": "/EN.png",
-    "link": "edvinnordin.netlify.app",
-    "github": "https://github.com/EdvinNordin/Vueing"
+    "link": "https://edvinnordin.me",
+    "github": "https://github.com/EdvinNordin/NuxtPortfolio"
   }
 ]
