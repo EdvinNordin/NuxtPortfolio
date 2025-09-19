@@ -1,10 +1,9 @@
 <script setup lang="ts">
-
-const backendUrl = import.meta.env.VITE_BACKEND_URL;
+//const backendUrl = import.meta.env.VITE_BACKEND_URL;
 const route = useRoute();
 const projectName = Array.isArray(route.params.project)
-  ? route.params.project.join('/')
-  : route.params.project as string;
+  ? route.params.project.join("/")
+  : (route.params.project as string);
 
 interface data {
   name: string;
@@ -17,13 +16,29 @@ interface data {
 }
 
 useHead({
-  title: formatName(projectName) + " - Edvin Nordin"
+  title: formatName(projectName) + " - Edvin Nordin",
 });
 
-const { data, error } = await useAsyncData<data>(
+/* const { data, error } = await useAsyncData<data>(
   () => projectName,
   () => $fetch<data>(backendUrl + '/projects/' + projectName)
-);
+); */
+
+const projects = ref<data[]>([]);
+onMounted(() => {
+  fetch("/projects.json")
+    .then((response) => response.json())
+    .then((data) => {
+      projects.value = data;
+    })
+    .catch((error) => {
+      console.error("Error loading the JSON file:", error);
+    });
+});
+
+const data = computed(() => {
+  return projects.value.find((project) => project.name === projectName);
+});
 
 function formatName(name: string) {
   return name.replaceAll("_", " ");

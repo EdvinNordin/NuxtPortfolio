@@ -1,6 +1,5 @@
 <script setup lang="ts">
-
-interface Project {
+/* interface Project {
   name: string;
   // Add other properties of your project as needed
 }
@@ -9,7 +8,29 @@ const backendUrl = import.meta.env.VITE_BACKEND_URL;
 const {data, error} = await useAsyncData<Project[]>("projects", () =>
   $fetch(backendUrl + '/projects')
   
-);
+); */
+
+interface data {
+  name: string;
+  description: string;
+  image: string;
+  youtube?: string;
+  link?: string;
+  document?: string;
+  github?: string;
+}
+
+const projects = ref<data[]>([]);
+onMounted(() => {
+  fetch("/projects.json")
+    .then((response) => response.json())
+    .then((data) => {
+      projects.value = data;
+    })
+    .catch((error) => {
+      console.error("Error loading the JSON file:", error);
+    });
+});
 </script>
 <template>
   <div class="w-7/8 mx-auto md:w-full">
@@ -18,7 +39,7 @@ const {data, error} = await useAsyncData<Project[]>("projects", () =>
       <div
         class="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full max-w-7xl mx-auto md:px-4"
       >
-        <div v-for="project in data" :key="project.name">
+        <div v-for="project in projects" :key="project.name">
           <ProjectCard :project="project" />
         </div>
       </div>
