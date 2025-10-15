@@ -7,6 +7,13 @@
     "github": "https://github.com/EdvinNordin/WebFighting"
   },
   {
+    "name": "I’m currently developing a web app called localLLM, designed to run large language models (LLMs) locally using my own hardware. While I believe LLMs and AI are often misused today, I find them fascinating from a technical perspective. \nMy goal with this project is to explore how LLMs work while maintaining privacy and control by keeping all processing on my own machine. I use Ollama as the local model runner, which conveniently exposes its API to the local network. This inspired me to build a Vue-based web interface and an Express backend so I can access and interact with my local LLM from any device on my network. \nThe app also includes an optional web search feature powered by LangSearch, allowing the model to retrieve up-to-date information when needed. The project is still evolving as I continue to refine the interface, improve performance, and experiment with different LLMs, and work on packaging it for easy installation and use by others.
+    "image": "/localLLM.jpg",
+    "link": "https://github.com/EdvinNordin/localLLM",
+    "github": "https://github.com/EdvinNordin/localLLM"
+  },
+  
+  {
     "name": "Fluid_Simulations",
     "description": "My master thesis where I focused on integrating real-time, physics-based fluid simulation into a stylized 2D pixel-art game using GPU compute shaders. The goal was to replace a simple Wave Equation (WE) simulation with more advanced methods based on Navier-Stokes (NS) and Lattice Boltzmann (LB) fluid dynamics. A key part of the work was developing efficient compute shader implementations in Unity to run complex simulations entirely on the GPU, allowing for: Parallel processing of fluid behavior across the simulation grid, Real-time visual feedback at stable frame rates, Dynamic parameter adjustments through a custom UI. The NS method, despite its complexity, was adapted for a 2D game engine and showed clear advantages in visual realism. Performance profiling revealed that projection and advection steps were the most computationally intensive, but still manageable under reasonable iteration counts. The LB method, though implemented, was ultimately unsuitable due to instability under volatile inputs. This work demonstrates how GPU-accelerated fluid simulation can bring visually rich, dynamic systems to environments with tight performance constraints, especially relevant for games that combine pixel art with advanced interactivity.",
     "image": "/corekeeper.jpg",
@@ -54,12 +61,5 @@
     "image": "/image.png",
     "document": "Image.pdf",
     "github": "https://github.com/JimmyCedervall/TNM097"
-  },
-  {
-    "name": "Portfolio",
-    "description": "The website you're on right now! A simple portfolio site made using Vue with Nuxt and Tailwind. Why don't you take a look around at some of my other projects?",
-    "image": "/EN.png",
-    "link": "https://edvinnordin.me",
-    "github": "https://github.com/EdvinNordin/NuxtPortfolio"
   }
 ]
